@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Welcome to my random password generator website</h1>
+    <div class="form_container">
+        
+      <form
+        aciton="/"
+        name="main_form"
+        id="form1"
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <!-- <fieldset> -->
+        <ul>
+          <li id="li1">
+            <label for="strength">Select the strength of your password:</label>
+            <select id="strength" name="sth">
+              <option>Weak</option>
+              <option>Medium</option>
+              <option>Hard</option>
+              <option>Uncrackable(min length = 10)</option>
+            </select>
+          </li>
+          <li>
+            <label for="p_length">Give the length of your password:</label>
+            <input type="text" name="lth" id="p_length" placeholder="max. length=60"/><span id="length_err"></span>
+          </li>
+          <!-- <li><input class="but" type="submit" value="Submit"></li>  -->
+        </ul>
+        <!-- <input class="but" type="submit" value="Submit">  -->
+        <button type="submit" id="button">submit</button> 
+        <!-- </fieldset> -->
+       </form>
+
+      <div id="passwd" class="answer">
+        <span><div id="deco" class="answer">Your password:</div>
+        <div id="password" class="answer">hello</div></span>
+        <!-- <label for="password" id="deco" class="answer">Your Answer:</label>
+        <input id="password" class="answer" readonly> -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
